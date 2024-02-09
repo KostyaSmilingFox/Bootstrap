@@ -1,0 +1,44 @@
+<div>
+    <main>
+        <section>
+            {{name}}
+            <br>
+            {{description}} 
+            {{#each history}}
+            {{this}}
+            {{/each}}
+            <br>
+            <hr>
+            {{#with types}}
+            {{this}}
+            {{/with}}
+            <br>
+            <hr>
+            {{#each syntax}}
+            {{this}}
+            {{/each}}
+            <br>
+            <hr>
+            {{#with features}}
+            {{this}}
+            {{/with}}
+            <br>
+            <hr>
+            {{#with libraries}}
+            {{this}}
+            {{/with}}
+            <br>
+            <hr>
+            {{#with tools}}
+            {{this}}
+            {{/with}}
+            <br>
+            <br>
+            {{#each community}}
+            {{name}}
+            {{type}}
+            <br>
+            {{/each}}
+        </section>
+    </main>
+</div>

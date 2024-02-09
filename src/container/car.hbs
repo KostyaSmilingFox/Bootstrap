@@ -1,0 +1,168 @@
+<div>
+
+    <main>
+
+        <section>
+            <div class='card'>
+                <h1>{{make}} {{model}}</h1>
+                <p>Year: {{year}}</p>
+                <p>Color: {{color}}</p>
+
+                
+                <div class='card-body'>
+                    <h2 class='card-title'>Interior</h2>
+                    <div class='card-body'></div>
+                    <h5 class='card-title'>Seats</h5>
+                    <div class='card-body'>
+                        <p>Seats Material:
+                            {{features.interior.seats.material}}</p>
+                        <p>Seats Color:
+                            {{features.interior.seats.color}}</p>
+                        <p>Heated Seats:
+                            {{#if
+                            features.interior.seats.heated
+                            }}Yes{{else}}No{{/if}}</p>
+                        <p>Ventilated Seats:
+                            {{#if
+                            features.interior.seats.ventilated
+                            }}Yes{{else}}No{{/if}}</p>
+                        <div class='card-body'>
+                            <h6 class='card-title'>Dashboard</h6>
+                            <p>Dashboard Material:
+                                {{features.interior.dashboard.material}}</p>
+                            <p>Dashboard Color:
+                                {{features.interior.dashboard.color}}</p>
+
+                        </div>
+
+                        <div class='card-body'>
+                            <h7 class='card-title'>Display</h7>
+                            <p>Type:
+                                {{features.interior.dashboard.display.type}}</p>
+                            <p>Size:
+                                {{features.interior.dashboard.display.size}}</p>
+                            <p>Resolution:
+                                {{features.interior.dashboard.display.resolution}}</p>
+                            <p>Touchscreen:
+                                {{#if
+                                features.interior.dashboard.display.touchscreen
+                                }}Yes{{else}}No{{/if}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class='card-body'>
+                    <h5 class='card-title'>Audio</h5>
+                    <p>System: {{features.interior.audio.system}}</p>
+                    <p>Speakers:
+                        {{features.interior.audio.system}}</p>
+                    <p>Subwoofer:
+                        {{#if
+                        features.interior.audio.subwoofer
+                        }}Yes{{else}}No{{/if}}</p>
+                    <p>Bluetooth:
+                        {{#if
+                        features.interior.audio.bluetooth
+                        }}Yes{{else}}No{{/if}}</p>
+                    <p>USB:
+                        {{#if
+                        features.interior.audio.USB
+                        }}Yes{{else}}No{{/if}}</p>
+                </div>
+
+                <div class='card-body'>
+                    <h5 class='card-title'>Exterior</h5>
+                    <div class='card-body'>
+                        <h6 class='card-title'>Wheels:</h6>
+                        <p>Size: {{features.exterior.wheels.size}}</p>
+                        <p>Type: {{features.exterior.wheels.type}}</p>
+                        <p>Color: {{features.exterior.wheels.color}}</p>
+                    </div>
+                    <div class='card-body'>
+                        <h6 class='card-title'>Headlights:</h6>
+                        <p>Type:
+                            {{features.exterior.headlights.type}}</p>
+                        <p>Brightness:
+                            {{features.exterior.headlights.brightness}}</p>
+                        <p>Automatic:
+                            {{#if
+                            features.exterior.headlights.automatic
+                            }}Yes{{else}}No{{/if}}</p>
+                    </div>
+                    <div class='card-body'>
+                        <h6 class='card-title'>Sunroof:</h6>
+                        <p>Type: {{features.exterior.sunroof.size}}</p>
+                        <p>Size: {{features.exterior.sunroof.type}}</p>
+                        <p>Automatic:
+                            {{#if
+                            features.exterior.sunroof.automatic
+                            }}Yes{{else}}No{{/if}}</p>
+                    </div>
+                    <div class='card-body'>
+                        <h6 class='card-title'>Safety</h6>
+                        <p>Airbags:
+                            {{features.safety.airbags.airbags}}</p>
+                        <p>Side: {{features.safety.airbags.side}}</p>
+                        <p>Knee: {{features.safety.airbags.knee}}</p>
+                        <p>Rear: {{features.safety.airbags.rear}}</p>
+                    </div>
+
+                    <div class='card-body'>
+                        <h2 class='card-title'>Engine</h2>
+                        <p>Engine Type: {{engine.type}}</p>
+                        <p>Displacement: {{engine.displacement}}</p>
+                        <p>Horsepower: {{engine.horsepower}}</p>
+                        <p>Torque: {{engine.torque}}</p>
+                        <div class='card-body'>
+                            <h6 class='card-title'>Transmission:</h6>
+                            <p>Type: {{engine.transmission.type}}</p>
+                            <p>Gears: {{engine.transmission.gears}}</p>
+                        </div>
+                    </div>
+
+                    <div class='card-body'>
+                        <h2 class='card-title'>Fuel Economy</h2>
+                        <p>City: {{fuel_economy.city}}</p>
+                        <p>Highway: {{fuel_economy.highway}}</p>
+                        <p>Combined: {{fuel_economy.combined}}</p>
+                    </div>
+
+                    <div class='card-body'>
+                        <h2 class='card-title'>Price</h2>
+                        <p>Base Price: {{price.base}}$</p>
+                        <p>Destination: {{price.destination}}</p>
+                        <div class='card-body'>
+                            <h6 class='card-title'>Options:</h6>
+                            <p>Navigation: {{price.options.navigation}}$</p>
+                            <p>Moonroof: {{price.options.moonroof}}</p>
+                            <p>Premium Paint: {{price.options.premium_paint}}</p>
+                        </div>
+                    </div>
+
+                    <div class='card-body'>
+                        <h2 class='card-title'>Total Price: {{price.total}}</h2>
+                    </div>
+
+                </div>
+            </div>
+</div>
+</section>
+
+</main>
+
+</div>
+
+{{!-- <ul>
+    {{#each education}}
+    <li>
+        {{name}}
+
+        {{#unless isEnd includeZero=true}} (Process){{/unless}}
+
+        {{#unless isEnd}}
+        {{#if isEnd includeZero=true}} (learn) {{/if}}
+        {{/unless}}
+
+    </li>
+    {{/each}}
+</ul> --}}
