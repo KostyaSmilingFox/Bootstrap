@@ -1,0 +1,86 @@
+<div>
+    <main>
+        <section>
+            <div>
+                 <div>
+        <h2>Navigation</h2>
+        <ul>
+            {{#each navigation.links}}
+                <li><a href="{{this.href}}" target="_blank">{{this.text}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div>
+        <h2>Latest News</h2>
+        {{#each newsBlock.cards}}
+            <div>
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
+                {{#if isTop}}
+                    <span>Top News</span>
+                {{/if}}
+                {{#if isNew}}
+                    <span>New</span>
+                {{/if}}
+            </div>
+        {{/each}}
+    </div>
+
+    <div>
+        <h2>Goods</h2>
+        <ul>
+            {{#each goodsBlock.tabs}}
+                <li>
+                    <button{{#if isActive}} class="active"{{/if}}{{#if isDisabled}} disabled{{/if}}>{{text}}</button>
+                </li>
+            {{/each}}
+        </ul>
+
+        {{#each goodsBlock.cards}}
+            <div>
+                <img src="{{image}}" alt="{{title}}">
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
+                {{#if isHot}}
+                    <span>Hot</span>
+                {{/if}}
+                {{#if isNew}}
+                    <span>New</span>
+                {{/if}}
+            </div>
+        {{/each}}
+    </div>
+
+    <div>
+        <h2>Subscribe</h2>
+        <p>{{subscribe.header}}</p>
+        <p>{{subscribe.description}}</p>
+        {{#each subscribe.buttons}}
+            <button><a href="{{this.link}}">{{this.text}}</a></button>
+        {{/each}}
+    </div>
+
+    <div>
+        <h2>Our Services</h2>
+        <p>{{service.description}}</p>
+        {{#each service.buttons}}
+            <button><a href="{{this.link}}">{{this.text}}</a></button>
+        {{/each}}
+    </div>
+
+    <div>
+        <h2>Footer</h2>
+        {{#each footer}}
+            <ul>
+                {{#each this}}
+                    <li><a href="{{this.link}}" target="_blank">{{this.text}}</a></li>
+                {{/each}}
+            </ul>
+        {{/each}}
+    </div>
+
+            </div>
+        </section>
+    </main>
+</div>

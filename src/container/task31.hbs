@@ -1,0 +1,130 @@
+<div>
+    <main>
+        <section>
+            <div class="card">
+                <div class="card-body">
+                <h1 class="card-title">{{page_header.title}}</h1>
+                <p>{{page_header.description}}</p>
+                <button><a href="{{page_header.button.link}}" target="_blank">{{page_header.button.text}}</a></button>
+            </div>
+
+            <div>
+                <h2>{{section.about_us.title_list.main}}</h2>
+                <p>{{section.about_us.title_list.sub}}</p>
+                <button>{{section.about_us.button.text}}</button>
+            </div>
+
+            <div>
+                <h2>{{section.advantage.title}}</h2>
+
+                <div>
+                    <h3>{{section.advantage.efficiency.title}}</h3>
+                    <p>{{section.advantage.efficiency.sub_title}}</p>
+                    <p>{{section.advantage.efficiency.description}}</p>
+                    <button>{{section.advantage.efficiency.button}}</button>
+                </div>
+
+                <!-- и так далее... -->
+
+            </div>
+
+            <div>
+                <h2>{{section.agreement.title}}</h2>
+                <div>
+                    <h3>{{section.agreement.info.sub_title}}</h3>
+                    <p>{{section.agreement.info.detail.text}}</p>
+                    <button><a href="{{section.agreement.info.detail.button}}" target="_blank">Accept</a></button>
+                </div>
+            </div>
+            </div>
+<div>
+    <div>
+        <h1>{{page_header.title}}</h1>
+        <p>{{page_header.description}}</p>
+        <button><a href="{{page_header.button.link}}">{{page_header.button.text}}</a></button>
+    </div>
+
+    <div>
+        <h2>Navigation</h2>
+        <ul>
+            {{#each navigation.links}}
+                <li><a href="{{this.href}}" target="_blank">{{this.text}}</a></li>
+            {{/each}}
+        </ul>
+        <button><a href="{{navigation.button.href}}">{{navigation.button.text}}</a></button>
+    </div>
+
+    <div>
+        <h2>City List</h2>
+        {{#each city.cards}}
+            <div>
+                <img src="{{picture.src}}" alt="{{picture.alt}}">
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
+                <button><a href="{{button.href}}">{{button.text}}</a></button>
+            </div>
+        {{/each}}
+    </div>
+
+    <div>
+        <h2>Our Winners</h2>
+        <table>
+            <thead>
+                <tr>
+                    {{#each winner.table.head}}
+                        <th>{{this}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each winner.table.user}}
+                    <tr>
+                        <td>{{place}}</td>
+                        <td>{{name}}</td>
+                        <td>{{surname}}</td>
+                        <td>{{nickname}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- и так далее... -->
+
+    <div>
+        <h2>Relax</h2>
+        {{#each relaxion.cards}}
+            <div>
+                <h3>{{header}}</h3>
+                <h4>{{title}}</h4>
+                <p>{{description}}</p>
+            </div>
+        {{/each}}
+    </div>
+
+    <!-- и так далее... -->
+
+    <div>
+        <h2>Footer</h2>
+        <ul>
+            {{#each footer.navigation}}
+                <li><a href="{{this.href}}" target="_blank">{{this.text}}</a></li>
+            {{/each}}
+        </ul>
+        <ul>
+            {{#each footer.socialMedia}}
+                <li><a href="{{this.link}}" target="_blank">{{this.name}}</a></li>
+            {{/each}}
+        </ul>
+        <ul>
+            {{#each footer.partners}}
+                <li><a href="{{this.link}}" target="_blank">{{this.name}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+
+</div>
+            <!-- и так далее... -->
+        </section>
+    </main>
+</div>
